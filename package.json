@@ -1,0 +1,23 @@
+{
+  "name": "ahysa",
+  "version": "1.0.0",
+  "description": "bots bots bots bots bots bots bots",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "yarn lint && node .",
+    "dev": "nodemon --exec yarn test",
+    "build": "coffee -o ./dist -c ./src",
+    "lint": "coffeelint src"
+  },
+  "repository": {
+    "type": ".git",
+    "url": "https://github.com/andgyk/ahysa.git"
+  },
+  "author": "Andgyk",
+  "devDependencies": {
+    "coffeelint": "^2.1.0",
+    "coffeescript": "^2.7.0",
+    "nodemon": "^2.0.16"
+  },
+  "license": "CC-BY-SA-4.0"
+}
