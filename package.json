@@ -19,5 +19,8 @@
     "coffeescript": "^2.7.0",
     "nodemon": "^2.0.16"
   },
-  "license": "CC-BY-SA-4.0"
+  "license": "CC-BY-SA-4.0",
+  "dependencies": {
+    "eris": "^0.16.1"
+  }
 }
