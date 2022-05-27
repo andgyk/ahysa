@@ -4,7 +4,7 @@
   "description": "bots bots bots bots bots bots bots",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "yarn lint && node .",
+    "test": "yarn lint && yarn build && node .",
     "dev": "nodemon --exec yarn test",
     "build": "coffee -o ./dist -c ./src",
     "lint": "coffeelint src"
@@ -21,6 +21,7 @@
   },
   "license": "CC-BY-SA-4.0",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "eris": "^0.16.1"
   }
 }
