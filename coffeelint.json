@@ -1,0 +1,31 @@
+{
+    "$schema": "https://json.schemastore.org/coffeelint.json",
+    "arrow_spacing": {
+        "level": "error"
+    },
+    "camel_case_classes": {
+        "level": "error"
+    },
+    "no_backticks": {
+        "level": "error"
+    },
+    "no_this": {
+        "level":"error"
+    },
+    "no_trailing_semicolons": {
+        "level": "warn"
+    },
+    "prefer_english_operator": {
+        "level": "warn"
+    },
+    "braces_spacing": {
+        "level": "error"
+    },
+    "colon_assignment_spacing": {
+        "level": "warn"
+    },
+    "indentation": {
+        "level": "error",
+        "value": 4
+    }
+}
