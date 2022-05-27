@@ -23,10 +23,20 @@
         "spaces": 1
     },
     "colon_assignment_spacing": {
-        "level": "warn"
+        "level": "warn",
+        "spacing": {
+            "left": 0,
+            "right": 1
+        }
     },
     "indentation": {
         "level": "error",
         "value": 4
+    },
+    "spacing_after_comma": {
+        "level": "error"
+    },
+    "no_interpolation_in_single_quotes": {
+        "level": "error"
     }
 }
