@@ -6,9 +6,8 @@ module.exports =
     cate: "eco"
     alias: ["bal", "balance"]
     desc: "Check your eco cash"
-    run: ({ client, message }) ->
-        cash = await db.user.searchProp message.author.id, "eco.cash"
-        cash = commaNumber cash
+    run: ({ client, message, schema: { user } }) ->
+        cash = commaNumber user.eco.cash
 
         return message.channel.createMessage {
             content: "**#{message.author.username}**, you currently have **__#{cash}__** cash"
