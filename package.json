@@ -25,6 +25,7 @@
     "comma-number": "^2.1.0",
     "dotenv": "^16.0.1",
     "eris": "^0.16.1",
-    "mongoose": "^6.3.4"
+    "mongoose": "^6.3.4",
+    "parse-ms": "2.1.0"
   }
 }
