@@ -24,4 +24,13 @@ exports.commands = ({ client, message }) ->
     command = client.commands.getCommand do content.toLowerCase, true
 
     if command
-        command.run { args, client, message, prefix }
+        schemaUser = null
+
+        if command.cate is "eco"
+            schemaUser = await client.getSchemaUser message.author.id
+        
+        command.run {
+            args, client, message, prefix,
+            schema:
+                user: schemaUser
+        }
