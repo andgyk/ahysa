@@ -22,6 +22,7 @@
   },
   "license": "CC-BY-SA-4.0",
   "dependencies": {
+    "comma-number": "^2.1.0",
     "dotenv": "^16.0.1",
     "eris": "^0.16.1",
     "mongoose": "^6.3.4"
