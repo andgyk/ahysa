@@ -38,5 +38,10 @@
     },
     "no_interpolation_in_single_quotes": {
         "level": "error"
+    },
+    "max_line_length": {
+        "level": "warn",
+        "value": 180,
+        "limitComments": false
     }
 }
