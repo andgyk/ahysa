@@ -7,6 +7,12 @@ exports.commands = ({ client, message }) ->
     if message.channel.type is 1
         return
 
+    permission = message.channel.permissionsOf client.user.id
+
+    # Return on missing permissions
+    if not permission.has "sendMessages" or not permission.has "embedLinks"
+        return
+
     # Create message on bot mention
     if message.content is "<@979750867483906088>"
         return message.channel.createMessage {
