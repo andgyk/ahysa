@@ -21,7 +21,7 @@ exports.commands = ({ client, message }) ->
 
     args = message.content.slice(prefix.length).trim().split(/ +/g)
     content = do args.shift
-    command = client.getCachedCommand do content.toLowerCase
+    command = client.commands.getCommand do content.toLowerCase, true
 
     if command
         command.run { args, client, message, prefix }

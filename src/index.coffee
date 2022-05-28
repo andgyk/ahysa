@@ -43,7 +43,7 @@ loadCommands = ({ client, dir }) ->
                     # Add file path to the prop
                     file.path = filePath
                     # Set file to command cache
-                    client.commandCache.set (name.replace ".js", ""), file
+                    client.commands.setCommand (name.replace ".js", ""), file
                 
 
         i++
