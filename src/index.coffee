@@ -5,11 +5,19 @@ do env.config
 
 fs = require "fs"
 path = require "path"
+mongoose = require "mongoose"
 
 Ahysa = require "./client"
 options = {
     intents: ["guilds", "guildMessages"]
 }
+
+connect_mongodb = ->
+    # Emitted when connection opened
+    mongoose.connection.once "open", ->
+        console.info "Mongodb connection established"
+    # Connect to mongodb
+    mongoose.connect process.env.MONGODB_URL
 
 loadCommands = ({ client, dir }) ->
     # If directory does not exist then create it
@@ -43,6 +51,8 @@ loadCommands = ({ client, dir }) ->
 client = new Ahysa process.env.DISCORD_TOKEN, options
 loadCommands { client, dir: path.join "dist", "commands" }
 
+# Calls the function to connect to mongodb using mongoose
+do connect_mongodb
 # Calls the "client.connect()" method
 do client.connect
 process.on "unhandledRejection", (errorMessage) ->

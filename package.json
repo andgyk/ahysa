@@ -23,6 +23,7 @@
   "license": "CC-BY-SA-4.0",
   "dependencies": {
     "dotenv": "^16.0.1",
-    "eris": "^0.16.1"
+    "eris": "^0.16.1",
+    "mongoose": "^6.3.4"
   }
 }
