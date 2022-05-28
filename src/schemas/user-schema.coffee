@@ -3,9 +3,6 @@
 user = new Schema {
     _id: String
     eco:
-        cash:
-            type: Number
-            default: 0
         bank:
             depo:
                 type: Number
@@ -13,6 +10,16 @@ user = new Schema {
             limit:
                 type: Number
                 default: 2500
+        beg:
+            total:
+                type: Number
+                default: 0
+            timeout:
+                type: Date
+                default: null
+        cash:
+            type: Number
+            default: 0
         job:
             type: String
             default: "unemp"
