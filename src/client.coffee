@@ -7,6 +7,17 @@ class Ahysa extends Client
         # For command cache
         @commandCache = new Map
 
+        @getCachedCommand = (name) ->
+            command = undefined
+
+            @commandCache.forEach (val) ->
+                if not command
+                    if val.name is name
+                        command = val
+                    else if val.alias is name
+                        command = val
+            return command
+
         # Event on
         @on "messageCreate", (message) ->
             command = require("./events/message").commands
