@@ -4,7 +4,7 @@
   "description": "bots bots bots bots bots bots bots",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "yarn lint && yarn build && node .",
+    "test": "yarn lint && rimraf dist && yarn build && node .",
     "dev": "nodemon --exec yarn test",
     "build": "coffee -o ./dist -c ./src",
     "lint": "coffeelint src"
@@ -17,7 +17,8 @@
   "devDependencies": {
     "coffeelint": "^2.1.0",
     "coffeescript": "^2.7.0",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "rimraf": "^3.0.2"
   },
   "license": "CC-BY-SA-4.0",
   "dependencies": {
