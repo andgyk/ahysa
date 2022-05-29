@@ -1,5 +1,5 @@
 { Client } = require "eris"
-Command = require "./command"
+Command = require "./util/command"
 UserSchema = require "./schemas/user-schema"
 
 class Ahysa extends Client

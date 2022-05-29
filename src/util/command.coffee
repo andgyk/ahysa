@@ -1,6 +1,7 @@
 class Command
     constructor: () ->
         @cache = new Map
+        @timeout = new Map
 
     getCommand: (name, allowAlias) ->
         command = undefined
@@ -17,6 +18,7 @@ class Command
         return command
 
     setCommand: (name, obj) ->
+        @timeout.set name, new Map
         @cache.set name, obj
 
     # Doesnt work
