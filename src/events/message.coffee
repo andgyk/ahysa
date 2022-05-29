@@ -30,6 +30,25 @@ exports.commands = ({ client, message }) ->
     command = client.commands.getCommand do content.toLowerCase, true
 
     if command
+
+        userId = message.author.id
+        timeout = client.commands.timeout.get command.name
+        cmdTimeout = command.timeout or 1000 * 3
+
+        if timeout.has userId
+            expiry = (timeout.get userId) + cmdTimeout
+            left = (expiry - do Date.now) / 1000
+
+            if do Date.now < expiry
+                return message.channel.createMessage {
+                    content: "**#{message.author.username}**, you have to wait **#{left.toFixed 1}** secs to use the command again"
+                }
+        else
+            timeout.set userId, do Date.now
+            delTimeout = -> timeout.delete userId
+            setTimeout delTimeout, cmdTimeout
+
+
         schemaUser = null
 
         if command.cate is "eco"
