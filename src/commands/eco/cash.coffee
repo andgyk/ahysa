@@ -1,4 +1,3 @@
-db = require "../../dbutils"
 commaNumber = require "comma-number"
 
 module.exports =
